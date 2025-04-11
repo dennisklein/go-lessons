@@ -22,3 +22,35 @@ docker buildx bake
 ```
 
 Build artifacts are written to `_out/`.
+
+### 1. Typical project structure
+
+```
+├── cmd
+│   └── <exename>
+│       └── *.go  <-- Needs "package main"
+├── go.mod
+├── pkg
+│   └── <pkgname>
+│       └── *.go  <-- Needs "package <pkgname>"
+└── README.md
+```
+
+* Generate `go.mod` via `go mod init <modulename>`
+   * `<modulename>` typically github url, e.g. for this module
+     `github.com/dennisklein/go-lessons`
+* Update `go.mod` via `go mod tidy` after changing import statements in source
+  files
+* Import packages from `pkg` directory via
+  ```go
+  import "<modulename>/pkg/<pkgname>"
+  ```
+* Build via `go build ./...`
+* Release by tagging with a semantic version, e.g. `v1.3.14`
+   * Versions below `v1.0.0` are considered unstable
+
+### 2. Simple executable
+
+![cli](docs/cli.gif)
+
+[`cmd/cli/main.go`](cmd/cli/main.go)
