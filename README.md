@@ -21,4 +21,4 @@ cd go-lessons
 docker buildx bake
 ```
 
-Build artefacts are written to `_out/`.
+Build artifacts are written to `_out/`.
