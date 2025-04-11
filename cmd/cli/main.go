@@ -12,6 +12,6 @@ import (
 func main() {
 	fmt.Println("Hello World")
 
-  // Return non-zero exit code, e.g.
-  // os.Exit(1)
+	// Return non-zero exit code, e.g.
+	// os.Exit(1)
 }
