@@ -46,7 +46,7 @@ Build artifacts are written to `_out/`.
   import "<modulename>/pkg/<pkgname>"
   ```
 * Build via `go build ./...`
-* Release by tagging with a semantic version, e.g. `v1.3.14`
+* Release by tagging with a [semantic version](https://semver.org/), e.g. `v1.3.14`
    * Versions below `v1.0.0` are considered unstable
 
 ### 2. Simple executable
